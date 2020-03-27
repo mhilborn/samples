@@ -11,6 +11,7 @@ import 'package:veggieseasons/screens/home.dart';
 import 'package:veggieseasons/styles.dart';
 
 void main() {
+  WidgetsFlutterBinding.ensureInitialized();
   SystemChrome.setPreferredOrientations([
     DeviceOrientation.portraitUp,
     DeviceOrientation.portraitDown,
@@ -22,6 +23,9 @@ void main() {
       child: ScopedModel<Preferences>(
         model: Preferences()..load(),
         child: CupertinoApp(
+          theme: CupertinoThemeData(
+            brightness: Brightness.light,
+          ),
           debugShowCheckedModeBanner: false,
           color: Styles.appBackground,
           home: HomeScreen(),

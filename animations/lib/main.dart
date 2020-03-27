@@ -3,7 +3,6 @@
 // found in the LICENSE file.
 
 import 'package:flutter/material.dart';
-
 import 'src/basics/01_animated_container.dart';
 import 'src/basics/02_page_route_builder.dart';
 import 'src/basics/03_animation_controller.dart';
@@ -11,10 +10,15 @@ import 'src/basics/04_tweens.dart';
 import 'src/basics/05_animated_builder.dart';
 import 'src/basics/06_custom_tween.dart';
 import 'src/basics/07_tween_sequence.dart';
+import 'src/basics/08_fade_transition.dart';
+import 'src/basics/09_animated_positioned.dart';
+import 'src/basics/10_animated_switcher.dart';
+import 'src/misc/animated_list.dart';
 import 'src/misc/card_swipe.dart';
 import 'src/misc/carousel.dart';
 import 'src/misc/expand_card.dart';
 import 'src/misc/focus_image.dart';
+import 'src/misc/hero_animation.dart';
 import 'src/misc/physics_card_drag.dart';
 import 'src/misc/repeating_animation.dart';
 
@@ -25,35 +29,85 @@ class Demo {
   final String route;
   final WidgetBuilder builder;
 
-  const Demo(this.name, this.route, this.builder);
+  const Demo({this.name, this.route, this.builder});
 }
 
 final basicDemos = [
-  Demo('AnimatedContainer', AnimatedContainerDemo.routeName,
-      (context) => AnimatedContainerDemo()),
-  Demo('PageRouteBuilder', PageRouteBuilderDemo.routeName,
-      (context) => PageRouteBuilderDemo()),
-  Demo('Animation Controller', AnimationControllerDemo.routeName,
-      (context) => AnimationControllerDemo()),
-  Demo('Tweens', TweenDemo.routeName, (context) => TweenDemo()),
-  Demo('AnimatedBuilder', AnimatedBuilderDemo.routeName,
-      (context) => AnimatedBuilderDemo()),
-  Demo('Custom Tween', CustomTweenDemo.routeName,
-      (context) => CustomTweenDemo()),
-  Demo('Tween Sequences', TweenSequenceDemo.routeName,
-      (context) => TweenSequenceDemo()),
+  Demo(
+      name: 'AnimatedContainer',
+      route: AnimatedContainerDemo.routeName,
+      builder: (context) => AnimatedContainerDemo()),
+  Demo(
+      name: 'PageRouteBuilder',
+      route: PageRouteBuilderDemo.routeName,
+      builder: (context) => PageRouteBuilderDemo()),
+  Demo(
+      name: 'Animation Controller',
+      route: AnimationControllerDemo.routeName,
+      builder: (context) => AnimationControllerDemo()),
+  Demo(
+      name: 'Tweens',
+      route: TweenDemo.routeName,
+      builder: (context) => TweenDemo()),
+  Demo(
+      name: 'AnimatedBuilder',
+      route: AnimatedBuilderDemo.routeName,
+      builder: (context) => AnimatedBuilderDemo()),
+  Demo(
+      name: 'Custom Tween',
+      route: CustomTweenDemo.routeName,
+      builder: (context) => CustomTweenDemo()),
+  Demo(
+      name: 'Tween Sequences',
+      route: TweenSequenceDemo.routeName,
+      builder: (context) => TweenSequenceDemo()),
+  Demo(
+      name: 'Fade Transition',
+      route: FadeTransitionDemo.routeName,
+      builder: (context) => FadeTransitionDemo()),
+  Demo(
+      name: 'AnimatedPositioned',
+      route: AnimatedPositionedDemo.routeName,
+      builder: (context) => AnimatedPositionedDemo()),
+  Demo(
+      name: 'AnimatedSwitcher',
+      route: AnimatedSwitcherDemo.routeName,
+      builder: (context) => AnimatedSwitcherDemo())
 ];
 
 final miscDemos = [
-  Demo('Expandable Card', ExpandCardDemo.routeName,
-      (context) => ExpandCardDemo()),
-  Demo('Carousel', CarouselDemo.routeName, (context) => CarouselDemo()),
-  Demo('Focus Image', FocusImageDemo.routeName, (context) => FocusImageDemo()),
-  Demo('Card Swipe', CardSwipeDemo.routeName, (context) => CardSwipeDemo()),
-  Demo('Repeating Animation', RepeatingAnimationDemo.routeName,
-      (context) => RepeatingAnimationDemo()),
-  Demo('Spring Physics', PhysicsCardDragDemo.routeName,
-      (context) => PhysicsCardDragDemo()),
+  Demo(
+      name: 'Expandable Card',
+      route: ExpandCardDemo.routeName,
+      builder: (context) => ExpandCardDemo()),
+  Demo(
+      name: 'Carousel',
+      route: CarouselDemo.routeName,
+      builder: (context) => CarouselDemo()),
+  Demo(
+      name: 'Focus Image',
+      route: FocusImageDemo.routeName,
+      builder: (context) => FocusImageDemo()),
+  Demo(
+      name: 'Card Swipe',
+      route: CardSwipeDemo.routeName,
+      builder: (context) => CardSwipeDemo()),
+  Demo(
+      name: 'Repeating Animation',
+      route: RepeatingAnimationDemo.routeName,
+      builder: (context) => RepeatingAnimationDemo()),
+  Demo(
+      name: 'Spring Physics',
+      route: PhysicsCardDragDemo.routeName,
+      builder: (context) => PhysicsCardDragDemo()),
+  Demo(
+      name: 'AnimatedList',
+      route: AnimatedListDemo.routeName,
+      builder: (context) => AnimatedListDemo()),
+  Demo(
+      name: 'Hero Animation',
+      route: HeroAnimationDemo.routeName,
+      builder: (context) => HeroAnimationDemo()),
 ];
 
 final basicDemoRoutes =
